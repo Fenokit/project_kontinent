@@ -113,7 +113,7 @@ celerybeat.pid
 
 # Environments
 .env
-.venv
+weather_project/.venv
 env/
 venv/
 ENV/
