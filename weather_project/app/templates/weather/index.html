@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Weather App</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .card {
+      background-color: #f5f5f5;
+      border-radius: 10px;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    img {
+      width: 20px;
+      height: 20px;
+    }
+  </style>
+</head>
+<body>
+   <div class="card">
+    <h1>Weather Information</h1>
+    <h2>Время: {{ time }}</h2>
+    <p>Погода в городе: {{ city }}</p>
+    <p>Температура: {{ temperature }} °C {{ condition }} <img src="{{ icon }}"></p>
+    <p>Давление: {{ pressure }} мм.рт.ст</p>
+    <p>Влажность: {{ humidity }}%</p>
+    <p>Ветер: {{ wind }} м/с</p>
+    <p>Восход солнца: {{ sunrise_timestamp }}</p>
+    <p>Закат солнца: {{ sunset_timestamp }}</p>
+    <p>Продолжительность дня: {{length_of_the_day}}</p>
+    <h2>Хорошего дня!</h2>
+    <p>Источник: <a href="{{ link }}">Больше информации</a></p>
+   </div>
+</body>
+</html>
