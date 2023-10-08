@@ -20,8 +20,6 @@ def weather(request, lat='55.75396', lot='37.620393'):
         sunset = datetime.datetime.strptime(data['forecasts'][0]['sunset'], '%H:%M')
         duration_of_the_day = sunset - sunrise
         condition = data['fact']['condition']
-        print(f"{condition} - {data['fact']['condition']}")
-        print(data['forecasts'][0])
         weather_to_the_city = {
             'time': data['forecasts'][0]['date'],
             'city': data['geo_object']['locality']['name'],
